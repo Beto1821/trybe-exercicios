@@ -5,3 +5,7 @@ O que eu vou aprender na Trybe:
 - Git
 - Html
 - CSS
+- Java
+- java script
+- c--
+- C#
