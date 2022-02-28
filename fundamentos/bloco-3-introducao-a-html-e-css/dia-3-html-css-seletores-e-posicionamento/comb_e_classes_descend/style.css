@@ -16,3 +16,18 @@ h1 {
 h3 {
     color: red 
 }
+ol li em {
+    font-size: 20px;
+    font-weight: bold ;
+}
+ul {
+    font-size: 20px;
+}
+ul.linguagem li:nth-of-type(1),
+ ul.linguagem li:nth-of-type(2),
+ ul.linguagem li:nth-of-type(3) {
+    color: blue;
+}
+.java {
+    background-color: pink;
+}
