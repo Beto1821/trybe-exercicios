@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic&family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic&family=Pacifico&family=Roboto:ital,wght@0,100;0,300;1,100;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic&family=Pacifico&family=Poppins:ital,wght@0,200;1,100&family=Roboto:ital,wght@0,100;0,300;1,100;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic&family=Pacifico&family=Poppins:ital,wght@0,200;1,100&family=Roboto:ital,wght@0,100;0,300;1,100;1,300&family=Ubuntu:ital,wght@0,400;1,300&display=swap');
+
+#d1:hover {
+    border-style: groove;
+    background-color: aqua;
+    font-style: italic;
+}
+
+#d2:hover {
+    border-style: groove;
+    background-color: yellow;
+    font-family: Ubuntu;
+}
+
+#d3:hover {
+    border-style: groove;
+    background-color: rgb(255, 0, 55);
+    font-family: Roboto;
+    font-size: 30px;
+    font-style: italic;
+}
+
+#d4:hover {
+    border-style: groove;
+    background-color: rgb(72, 255, 0);
+    font-family: Pacifico;
+}
+
+#d5:hover {
+    border-style: groove;
+    background-color: rgb(161, 152, 201);
+    font-family: monospace;
+    font-style: italic;
+}
