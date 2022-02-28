@@ -31,3 +31,7 @@ ul.linguagem li:nth-of-type(1),
 .java {
     background-color: pink;
 }
+ul.aliados a:hover {
+    font-weight: bold;
+    color: green
+}
