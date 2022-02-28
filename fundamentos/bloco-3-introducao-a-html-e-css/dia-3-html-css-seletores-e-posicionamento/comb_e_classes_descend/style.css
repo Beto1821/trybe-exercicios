@@ -8,3 +8,11 @@ ol li:nth-child(even) {
 ol li:nth-child(odd) {
     text-transform: uppercase;
 }
+h1 {
+    font-size: 40px;
+    border: 2px solid rgb(161, 42, 42);
+    color: red;
+}
+h3 {
+    color: red 
+}
