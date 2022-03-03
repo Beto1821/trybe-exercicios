@@ -1,0 +1,14 @@
+header {
+    background-color: rgb(132, 99, 163);
+    color: whitesmoke;
+}
+
+nav {
+    border: 1px solid red;
+    background-color: bisque;
+}
+
+.menu {
+    display: inline;
+    padding: 5px;
+}
