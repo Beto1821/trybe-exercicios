@@ -122,13 +122,76 @@
 
 //Exercicio 8
 
-const n1 = 5;
-const n2 = 3;
-const n3 = 7;
+// const n1 = 5;
+// const n2 = 3;
+// const n3 = 7;
 
-if (n1 % 2 === 0 || n2 % 2 === 0 || n3 % 2 ===0) {
-    console.log("True");
+// if (n1 % 2 === 0 || n2 % 2 === 0 || n3 % 2 ===0) {
+//     console.log("True");
+// }
+// else {
+//     console.log("False");
+// }
+
+//Exercicio 9
+
+// const n1 = 3;
+// const n2 = 4;
+// const n3 = 2;
+
+// if (n1 % 2 != 0 || n2 % 2 != 0 || n3 % 2 !=0) {
+//     console.log("True");
+// }
+// else {
+//     console.log("False");
+// }
+
+//Exercicio 10
+
+// let valorCusto = 1000;
+// let valorVenda = 2000;
+// impostoSobreOCusto = valorCusto * 0.2 ;
+
+// let valorCustoTotal = valorCusto + impostoSobreOCusto;
+// let lucro = valorVenda - valorCustoTotal;
+
+// let lucroTotal = lucro * 1000;
+// console.log(lucroTotal);
+
+//Exercicio 11
+
+let salario = 3000.00;
+
+
+// INSS
+if (salario <= 1556.94) {
+    salario = salario - ( salario * 0.08 );   
+}
+else if (salario > 1556.94 && salario <= 2594.92) {
+    salario = salario - ( salario * 0.09 ); 
+}
+else if (salario > 2594.92 && salario <= 5189.82) {
+    salario = salario - ( salario * 0.11 ); 
 }
 else {
-    console.log("False");
+    salario = salario - 570.88 
 }
+//console.log(salario);
+// IR
+if (salario > 1903.98 && salario <= 2826.65) {
+    salario = (salario -((salario * 0.075)- 142.8));
+}
+else if (salario > 2826.65 && salario <= 3751.05 ) {
+    salario = (salario -((salario * 0.15)- 354.8));
+}
+else if (salario > 2826.65 && salario <= 3751.05 ) {
+    salario = (salario -((salario * 0.15)- 354.8));
+}
+else if (salario > 3751.05 && salario <= 4664.68 ) {
+    salario = (salario -((salario * 0.225)- 636.13));
+}
+else if (salario > 4664.68) {
+    salario = (salario -((salario * 0.275)- 869.36));
+}
+
+console.log(salario);
