@@ -3,19 +3,19 @@
 // let b = 5;
 
 // let soma = a + b;
-// document.write(soma);
+// console.log(soma);
 
 // let sub = a - b;
-// document.write(sub);
+// console.log(sub);
 
 // let mult = a * b;
-// document.write(mult);
+// console.log(mult);
 
 // let div = a / b;
-// document.write(div);
+// console.log(div);
 
 // let modulo = a % b;
-// document.write(modulo);
+// console.log(modulo);
 
 //Exercicio 2
 
@@ -23,10 +23,10 @@
 // let b = 30;
 
 // if (a > b) {
-//     document.write("O valor A é Maior que o B.");
+//     console.log("O valor A é Maior que o B.");
 // }
 // else {
-//     document.write("O valor de B é maior que o A.");
+//     console.log("O valor de B é maior que o A.");
 // }
 
 //Exercico 3
@@ -36,15 +36,15 @@
 // let c = 55;
 
 // if (a > b && a > c) {
-//     document.write("O numero de A é o maior.");
+//     console.log("O numero de A é o maior.");
 // }
 
 // else if (b > a && b > c) {
-//     document.write("O numero de B é o maior.");
+//     console.log("O numero de B é o maior.");
 // }
 
 // else {
-//     document.write("O numero de C é o maior.");
+//     console.log("O numero de C é o maior.");
 // }
 
 //Exercicio 4
@@ -52,12 +52,12 @@
 // let valor = -1;
 
 // if (valor < 0) {
-//     document.write("Valor negativo.");
+//     console.log("Valor negativo.");
 // }
 // else if (valor > 0)("Valor positivo.");
 // }
 // else {
-//     document.write("Valor igual a zero.");
+//     console.log("Valor igual a zero.");
 // }
 
 //Exercicio 5
@@ -68,36 +68,36 @@
 // soma = ladoA + ladoB + ladoC
 
 // if (ladoA < 0 || ladoB < 0 || ladoC < 0) {
-//     document.write("ERRO");
+//     console.log("ERRO");
 // }
 
 // else if (soma >= 0  && soma < 180 || soma > 180 ) {
-//     document.write("False");
+//     console.log("False");
 // }
 // else if (soma === 180) {
-//     document.write("True");
+//     console.log("True");
 // }
 
 //Exercicio 6
 
-var peca = window.prompt("escolha uma peça de xadrez").toLowerCase();
+// var peca = window.prompt("escolha uma peça de xadrez").toLowerCase();
 
 
 
-if (peca === "peão" ) {
-    document.write("Movimenta para frente e diagonal");
-}
-else if (peca === "torre") {
-    document.write("Movimento para frente e para o lado");
-}
-else if (peca === "cavalo") {
-    document.write("O cavalo move-se por duas casas horizontalmente ou verticalmente e então uma casa a mais em uma ângulo reto. O movimento do cavalo forma um “L”. ");
-}
-else if (peca === "rainha") {
-    document.write("Ela pode mover-se qualquer número de casas em linha reta - verticalmente, horizontalmente ou diagonalmente. ");
-}
+// if (peca === "peão" ) {
+//     document.write("Movimenta para frente e diagonal");
+// }
+// else if (peca === "torre") {
+//     document.write("Movimento para frente e para o lado");
+// }
+// else if (peca === "cavalo") {
+//     document.write("O cavalo move-se por duas casas horizontalmente ou verticalmente e então uma casa a mais em uma ângulo reto. O movimento do cavalo forma um “L”. ");
+// }
+// else if (peca === "rainha") {
+//     document.write("Ela pode mover-se qualquer número de casas em linha reta - verticalmente, horizontalmente ou diagonalmente. ");
+// }
 
-//Exercicio 7
+// //Exercicio 7
 
 // var nota = window.prompt("Qual foi sua nota em %: ");
 
@@ -119,3 +119,16 @@ else if (peca === "rainha") {
 // else {
 //     document.write("Conceito F");
 // }
+
+//Exercicio 8
+
+const n1 = 5;
+const n2 = 3;
+const n3 = 7;
+
+if (n1 % 2 === 0 || n2 % 2 === 0 || n3 % 2 ===0) {
+    console.log("True");
+}
+else {
+    console.log("False");
+}
