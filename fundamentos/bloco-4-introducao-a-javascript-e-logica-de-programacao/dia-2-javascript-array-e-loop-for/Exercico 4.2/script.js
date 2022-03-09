@@ -19,10 +19,10 @@ let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 // let soma = 0
 // let i = 0
 // for (i ; i < numbers.length; i += 1) {
-//     soma = soma + numbers[i];
+//     soma = soma + numbers[i];"nenhum valor ímpar encontrado"
 
 // }
-// let media = (soma/i)
+// let media = (soma/i)"nenhum valor ímpar encontrado"
 // console.log(media);
 
 //Exercicio 4
@@ -56,13 +56,52 @@ let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 
 //Exercicio 6
 
+// let cont= 0;
+
+// for (i = 0; i < numbers.length; i += 1) {
+//     if (numbers[i] % 2 !== 0) {
+//         cont += 1;
+//     }
+// }
+// console.log('Foram encontrados', cont ,'valores impares.' );
+// if (cont === 0) {
+//     console.log("nenhum valor ímpar encontrado");
+// }
+
+//Exercicio 7
+
+// let menor = numbers[0];
+
+// for (i = 0; i < numbers.length; i += 1) {
+//     if (menor > numbers[i]) {
+//         menor = numbers[i];
+//     }
+// }
+// console.log('O menor número é ', menor);
+
 //Exercicio 8
-let limite = 25;
+// let limite = 25;
 
-let arrayNumeros = []
+// let arrayNumeros = []
 
-for (let i = 1; i <= limite; i += 1) {
-    arrayNumeros.push(i)
-}
+// for (let i = 1; i <= limite; i += 1) {
+//     arrayNumeros.push(Math.ceil(Math.random() * 25));
+// }
 
-console.log(arrayNumeros);
+// console.log(arrayNumeros);
+
+
+//Exercicio 9
+
+// let limite = 25;
+
+// let arrayNumeros = []
+
+// for (let i = 1; i <= limite; i += 1) {
+//     arrayNumeros.push((Math.ceil(Math.random() * 25))/2);
+// }
+
+// console.log(arrayNumeros);
+
+//Bonus
+
