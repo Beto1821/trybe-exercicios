@@ -1,4 +1,4 @@
-let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+//let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 
 //Exercicio 1
 
@@ -105,3 +105,48 @@ let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 
 //Bonus
 
+//Exercicio 1
+
+// let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+
+// for (let index = 1; index < numbers.length; index += 1) {
+//     for (let secondIndex = 0; secondIndex < index; secondIndex += 1) {
+//       if (numbers[index] < numbers[secondIndex]) {
+//         let position = numbers[index];
+//         numbers[index] = numbers[secondIndex];
+//         numbers[secondIndex] = position;
+//       }
+//     }
+//   }
+
+//   console.log(numbers);
+
+//Exercicio 2
+
+// let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+
+// for (let index = 1; index < numbers.length; index += 1) {
+//     for (let secondIndex = 0; secondIndex < index; secondIndex += 1) {
+//       if (numbers[index] > numbers[secondIndex]) {
+//         let position = numbers[index];
+//         numbers[index] = numbers[secondIndex];
+//         numbers[secondIndex] = position;
+//       }
+//     }
+//   }
+// console.log(numbers);
+
+//Exercicio 3
+
+let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+let arrayNumbers = []
+
+for (i = 0; i < numbers.length; i += 1) {
+    if (i === (numbers.length - 1)) {
+    arrayNumbers.push(numbers[i]*2);
+}
+else {
+    arrayNumbers.push(numbers[i] * numbers[i + 1]);
+}
+}
+console.log(arrayNumbers);
