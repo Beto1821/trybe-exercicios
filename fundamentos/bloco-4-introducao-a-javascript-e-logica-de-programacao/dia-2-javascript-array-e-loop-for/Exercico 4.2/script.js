@@ -138,15 +138,31 @@
 
 //Exercicio 3
 
+// let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+// let arrayNumbers = []
+
+// for (i = 0; i < numbers.length; i += 1) {
+//     if (i === (numbers.length - 1)) {
+//     arrayNumbers.push(numbers[i]*2);
+// }
+// else {
+//     arrayNumbers.push(numbers[i] * numbers[i + 1]);
+// }
+// }
+// console.log(arrayNumbers);
+
+
+
 let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 let arrayNumbers = []
 
 for (i = 0; i < numbers.length; i += 1) {
-    if (i === (numbers.length - 1)) {
-    arrayNumbers.push(numbers[i]*2);
-}
-else {
+    if (numbers[i + 1]) {
     arrayNumbers.push(numbers[i] * numbers[i + 1]);
-}
+  }
+else {
+    arrayNumbers.push(numbers[i] * 2);
+  }
 }
 console.log(arrayNumbers);
+
