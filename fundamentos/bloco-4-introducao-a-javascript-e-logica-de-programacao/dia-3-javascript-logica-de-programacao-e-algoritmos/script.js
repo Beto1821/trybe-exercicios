@@ -44,6 +44,7 @@
 
 //Exercicio 4
 
+// copiado de stack overflow
 // function primeNumber(num) {
 //     for (let divisor = 2; divisor < num; divisor++)
 //     if (num % divisor == 0) return false;
@@ -56,20 +57,35 @@
 // }
 // }
 
-let maiorPrimo = 0;
-let arrayPrimos = [];
-div = 0;
-for (let i = 0; i <= 50; i += 1) {
-  div = 0;
-  for (let z = 1; z <= i; z += 1) {
-    if (i % z === 0) {
-      div += 1;
-    }
-  }
-  if (div === 2) {
-    maiorPrimo = i;
-    arrayPrimos.push(maiorPrimo);
-  }
-}
-console.log(arrayPrimos);
-console.log(maiorPrimo);
+// Meu exercicio, com colaboração de Daniel bozza
+// let maiorPrimo = 0;
+// let arrayPrimos = [];
+// div = 0;
+// for (let i = 0; i <= 50; i += 1) {
+//   div = 0;
+//   for (let z = 1; z <= i; z += 1) {
+//     if (i % z === 0) {
+//       div += 1;
+//     }
+//   }
+//   if (div === 2) {
+//     maiorPrimo = i;
+//     arrayPrimos.push(maiorPrimo);
+//   }
+// }
+// console.log(arrayPrimos);
+// console.log(maiorPrimo);
+
+//Bonus 1
+//Agora vamos trabalhar com algumas formas geométricas! Faça um programa que, dado um valor n qualquer, seja n > 1 , imprima na tela um quadrado feito de asteriscos de lado de tamanho n .
+
+// let n = 7;
+
+// for (let i = 0; i < n; i += 1) {
+//     let piso = '';
+//     for (let z = 0; z < n; z += 1) {
+//         piso += '*';
+//     }
+//     console.log(piso);
+// }
+
