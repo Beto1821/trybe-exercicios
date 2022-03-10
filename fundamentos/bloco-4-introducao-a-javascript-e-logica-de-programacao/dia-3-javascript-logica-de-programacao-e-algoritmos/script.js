@@ -44,12 +44,32 @@
 
 //Exercicio 4
 
-function primeNumber(num) {
-    for (let divisor = 2; divisor < num; divisor++) 
-    if (num % divisor == 0) return false;
-    return true;
+// function primeNumber(num) {
+//     for (let divisor = 2; divisor < num; divisor++)
+//     if (num % divisor == 0) return false;
+//     return true;let maiorPrimo = 0;
+// let arrayBase = [];
+// let arrayPrimos = [];
+// div = 0;
+// for (let i = 0; i <= 50; i += 1_) {
+
+// }
+// }
+
+let maiorPrimo = 0;
+let arrayPrimos = [];
+div = 0;
+for (let i = 0; i <= 50; i += 1) {
+  div = 0;
+  for (let z = 1; z <= i; z += 1) {
+    if (i % z === 0) {
+      div += 1;
+    }
+  }
+  if (div === 2) {
+    maiorPrimo = i;
+    arrayPrimos.push(maiorPrimo);
+  }
 }
-
-var determinadoNumero = 50;
-
-for (let i = 2; i < determinadoNumero; i++) if (primeNumber(i)) console.log(i);
+console.log(arrayPrimos);
+console.log(maiorPrimo);
