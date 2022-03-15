@@ -81,7 +81,7 @@
         Caps()
       //  Crie uma função que exiba o conteúdo de todas as tags <p> no console.
        function pConsole() {
-          for (i = 0; i < document.getElementsByTagName('p').length; i += 1 ) {
+          for (i  in document.getElementsByTagName('p')) {
             console.log(document.getElementsByTagName('p')[i].innerHTML);
           }  
         };
