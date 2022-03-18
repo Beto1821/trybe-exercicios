@@ -11,3 +11,17 @@ document.getElementById('second-paragraph').innerText = 'Você vai desenvolver u
 // Por fim, recupere o subtítulo e altere-o também.
 document.getElementById('subtitle').innerText = 'Abobrinhas'
 document.getElementById('subtitle').style.color = 'green'
+
+// Adicione uma classe igual para os dois parágrafos.
+
+
+// Recupere os seus parágrafos via código JavaScript , usando a função getElementsByClassName ;
+document.getElementsByClassName('Parag');
+
+// Altere algum estilo do primeiro deles.
+let Parag1 = document.getElementsByClassName('Parag')[0];
+Parag1.style.backgroundColor = 'pink'
+
+
+// Recupere o subtítulo e altere a cor dele usando a função getElementsByTagName .
+document.getElementsByTagName('h4')[0].style.backgroundColor = 'yellow';
