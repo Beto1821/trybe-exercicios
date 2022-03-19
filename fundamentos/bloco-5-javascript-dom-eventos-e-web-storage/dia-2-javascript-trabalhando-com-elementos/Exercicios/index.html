@@ -101,12 +101,23 @@ pic.src = 'https://picsum.photos/200';
 
 
 //8 Adicione uma lista não ordenada com os valores de 1 a 10 por extenso, ou seja, um , dois , três , ... como valores da lista. Essa lista deve ser filha do section criado no passo 6;
-let listaol = document.createElement('ul');
-
-
+let listaul = document.createElement('ul');
+classeRight.appendChild(listaul);
+let numbers = ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez' ];
+for (let i of numbers) {
+    let li = document.createElement('li');
+    li.innerHTML = numbers[i];
+    li.innerText = [i]
+    listaul.appendChild(li);
+}
 
 
 //9 Adicione 3 tags h3 , todas sendo filhas do main criado no passo 2.
+for (let i = 1; i <= 3; i += 1 ) {
+    let tagh3 = document.createElement('h3');
+    tagh3.innerHTML = 'linha ' + [i];
+    main.appendChild(tagh3);
+}
 
 
     </script>
