@@ -34,18 +34,18 @@ const order = {
   },
 };
 
-// const customerInfo = ({
-//   name,
-//   phoneNumber,
-//   address : {stree, number, apartment},
-//   order: {
-//     delivery: {deliveryPerson},
-//   }
-// }) => {return `Olá ${deliveryPerson}, entrega para: ${name}, Telefone: ${phoneNumber}`
+const customerInfo = ({
+  name,
+  phoneNumber,
+  address : {street, number, apartment},
+  order: {
+    delivery: {deliveryPerson},
+  }
+}) => {return `Olá ${deliveryPerson}, entrega para: ${name}, Telefone: ${phoneNumber}, R. ${street}, Nº: ${number}, AP: ${apartment}.`
 
-// };
+};
 
-// console.log(customerInfo(order));
+console.log(customerInfo(order));
 
 const orderModifier = ({
   name,
