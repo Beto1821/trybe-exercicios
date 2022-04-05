@@ -62,9 +62,9 @@ const verifyPair = (objeto, key, valor ) => {
   //  console.log(entrada);
   let igual = false;  
   for(let i in entrada) {
-    if (entrada[i][0] === key && entrada[i][1] === valor) igual = true;    
-  }
-    return igual;
+    if(entrada[i][0] === key && entrada[i][1] === valor) igual = true;
+  }  
+  return igual;
 }
 
 console.log(verifyPair(lesson3, 'turno', 'noite'));
