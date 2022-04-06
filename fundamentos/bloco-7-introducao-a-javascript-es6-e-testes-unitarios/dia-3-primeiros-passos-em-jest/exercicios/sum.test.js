@@ -1,4 +1,4 @@
-const sum = require('./sum.js');
+const {sum, myRemove} = require('./sum.js');
 
 describe('Testes função sum', () => {
   test('verificar se resposta de soma(4,5) é igual a 9', () => {
@@ -20,4 +20,22 @@ describe('Testes função sum', () => {
       sum(4, '5');
     }).toThrowError('parameters must be numbers');
   })
+});
+
+describe('Testes função Myremove', () => {
+  test('Teste de array retirando o valor 3', () => {
+    const arr = [1, 2, 3, 4];
+    expect(myRemove(arr, 3)).not.toContain(3);
+  })
+
+  test('Teste de array vazio', () => {
+    const arr = [1, 2, 3, 4];
+    expect(myRemove(arr, [1, 2, 3, 4])).not.toContain([1, 2, 3, 4]);
+  })
+
+  test('Teste de array retirando o valor 3', () => {
+    const arr = [1, 2, 3, 4];
+    expect(myRemove(arr, 5)).not.toContain(5);
+  })
+
 });
