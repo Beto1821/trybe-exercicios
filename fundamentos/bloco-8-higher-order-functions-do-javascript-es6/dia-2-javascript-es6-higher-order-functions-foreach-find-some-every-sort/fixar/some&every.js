@@ -2,12 +2,12 @@
 // Copiar
 // const names = ['Mateus', 'José', 'Ana', 'Cláudia', 'Bruna'];
 
-// const hasName = (arr, name) => {
-//   //Adicione seu código aqui
-//   return arr.some((nome) => nome === name)
-// }
+const hasName = (arr, name) => {
+  //Adicione seu código aqui
+  return arr.some((nome) => nome === name)
+}
 
-// console.log(hasName(names, 'Ana'))
+console.log(hasName(names, 'Ana'))
 
 
 // 2 - Escreva uma função que dado um array de pessoas e uma idade mínima retorne true se todas tiverem a idade maior ou igual a mínima e caso contrário false , use every ;
