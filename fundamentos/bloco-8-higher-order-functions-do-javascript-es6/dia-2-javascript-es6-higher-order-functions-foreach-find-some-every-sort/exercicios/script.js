@@ -67,11 +67,11 @@ const books = [
 // Dica: use a função find .
 // Copiar
 
-// function authorBornIn1947() {
-//   return books.find((livro) => livro.author.birthYear === 1947)
-//  }
+function authorBornIn1947() {
+  return books.find((livro) => livro.author.birthYear === 1947)
+ }
 
-// console.log(authorBornIn1947().author.name);
+console.log(authorBornIn1947().author.name);
 
 //  2 - Retorne o nome do livro de menor nome.
 // Dica: use a função forEach .
