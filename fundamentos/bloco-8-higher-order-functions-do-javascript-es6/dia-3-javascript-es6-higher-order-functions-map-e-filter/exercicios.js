@@ -128,9 +128,22 @@ const books = [
 //   'O Chamado de Cthulhu',
 // ];
 
-function oldBooks() {
-  return books
-  .filter((livro) => new Date().getFullYear() - livro.releaseYear > 60)
-  .map((livro) => livro.name)
+// function oldBooks() {
+//   return books
+//   .filter((livro) => new Date().getFullYear() - livro.releaseYear > 60)
+//   .map((livro) => livro.name)
+// }
+// console.log(oldBooks());
+
+// 7 - Encontre o nome do livro escrito pela pessoa cujo nome registrado começa com três iniciais.
+// Dica: cada inicial termina com um ponto.
+
+function authorWith3DotsOnName() {
+  return books.filter((livro) => (
+    livro.author.name[1] === '.'
+    && livro.author.name[4] === '.'
+    && livro.author.name[7] === '.'
+  ))[0].name;
 }
-console.log(oldBooks());
+
+console.log(authorWith3DotsOnName());
