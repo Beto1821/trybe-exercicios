@@ -68,7 +68,7 @@ const books = [
 
 // const criaArray = () => books.map((livro) => `${livro.name} - ${livro.genre} - ${livro.author.name}`);
 
-//   // console.log(criaArray());
+//    console.log(criaArray());
 
 // 2 - Construa um array de objetos a partir do array de livros. Cada objeto deve conter uma propriedade author , com o nome da pessoa autora do livro, e uma propriedade age com a idade dessa pessoa quando o livro foi lançado. O array deve ser ordenado por idade, ou seja, da pessoa mais jovem para a mais velha considerando suas idades quando o livro foi lançado.
 // Dica: use as funções map , sort
@@ -99,10 +99,38 @@ const books = [
 // 4 - Crie um array ordenado pelos livros com mais de 60 anos de publicação e ordene-o pelo livro mais velho.
 // Dica: use as funções filter e sort
 
-function oldBooksOrdered() {
-  return books
-    .filter((livro) => new Date().getFullYear() - livro.releaseYear > 60)
-    .sort((livro1, livro2) => livro1.releaseYear - livro2.releaseYear);
-}
+// function oldBooksOrdered() {.sort((livro1, livro2) => livro1.author.name - livro2.author.name);
+//   return books
+//     .filter((livro) => new Date().getFullYear() - livro.releaseYear > 60)
+//     .sort((livro1, livro2) => livro1.releaseYear - livro2.releaseYear);
+// }
 
-console.log(oldBooksOrdered());
+// console.log(oldBooksOrdered());.sort((livro1, livro2) => livro1.author.name - livro2.author.name);
+
+// 5 - Crie um array em ordem alfabética apenas com os nomes de todas as pessoas autoras de ficção científica ou fantasia.
+
+// function fantasyOrScienceFictionAuthors() {
+//   return books
+//     .filter(
+//       (livro) =>
+//         livro.genre === 'Fantasia' || livro.genre === 'Ficção Científica'
+//     )
+//     .map((livro) => livro.author.name)
+//     .sort();
+// }
+// console.log(fantasyOrScienceFictionAuthors());
+
+// 6 - Crie um array com o nome de todos os livros com mais de 60 anos de publicação.
+
+// const expectedResult = [
+//   'O Senhor dos Anéis',
+//   'Fundação',
+//   'O Chamado de Cthulhu',
+// ];
+
+function oldBooks() {
+  return books
+  .filter((livro) => new Date().getFullYear() - livro.releaseYear > 60)
+  .map((livro) => livro.name)
+}
+console.log(oldBooks());
