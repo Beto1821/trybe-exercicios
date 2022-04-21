@@ -128,3 +128,8 @@ function containsA() {
 }
 
 console.log(containsA());
+
+
+// const containsA = () => names.join(',').split('').filter((i) => i === 'a' || i === 'A').length
+
+// console.log(containsA());
