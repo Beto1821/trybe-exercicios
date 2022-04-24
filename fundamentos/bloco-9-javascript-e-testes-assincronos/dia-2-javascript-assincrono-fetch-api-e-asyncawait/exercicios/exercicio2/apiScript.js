@@ -9,10 +9,9 @@ function coin () {
   fetch ('https://api.coincap.io/v2/assets', myObject)
   .then ((resposta) => resposta.json())
   .then ((data) => {
-    for (i = 0; i <= 9; i += 1) {
-      appendMoeda(data.data[i])
-    }
-  })
+    data.data.filter((data) => data.rank <= 15 ).forEach((moeda) => appendMoeda(moeda)) 
+      
+    })  
 }
 
 window.onload = () => coin();
