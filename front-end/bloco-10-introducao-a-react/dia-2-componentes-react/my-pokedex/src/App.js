@@ -1,6 +1,6 @@
 
+import pokemons from './data'
 import './App.css';
-import pokemons from './data';
 import Pokemon from './Pokemon';
 
 function App() {
