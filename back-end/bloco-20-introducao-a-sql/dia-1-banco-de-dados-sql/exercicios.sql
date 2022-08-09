@@ -1,0 +1,2 @@
+-- Active: 1660079668896@@127.0.0.1@3306@sakila
+SHOW TABLES;
