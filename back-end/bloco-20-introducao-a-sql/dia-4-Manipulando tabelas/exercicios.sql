@@ -41,4 +41,69 @@ SELECT * FROM Pixar.Movies;
 
 UPDATE Movies
 SET title = "Ratatouille" , year = 2007
-WHERE title = 'ratatui'
+WHERE title = 'ratatui';
+
+-- Exercício 5 Insira as novas classificações abaixo na tabela BoxOffice,
+-- lembre - se que a coluna movie_id é uma foreign key referente a coluna id da tabela Movies: Monsters SA,
+-- classificado em 8.5,
+-- lucrou 300 milhões no mercado interno e 250 milhões no mercado internacional.Os Incríveis,
+-- classificado em 7.4,
+-- lucrou 460 milhões no mercado interno e 510 milhões no mercado internacional.WALL - E,
+-- classificado em 9.9,
+-- lucrou 290 milhões no mercado interno e 280 milhões no mercado internacional.
+
+
+INSERT INTO
+    BoxOffice(
+        movie_id,
+        rating,
+        domestic_sales,
+        international_sales
+    )
+VALUES (9, 8.5, 300000000, 250000000), (10, 7.4, 460000000, 510000000), (11, 9.9, 290000000, 280000000);
+
+-- Exercício 6 Exclua da tabela Movies o filme "WALL-E".P.S.: Lembrando que existe uma relação de Primary key - Foreign Key,
+-- portanto devemos excluir primeiro a referência da tabela BoxOffice,
+-- para depois excluir da tabela Movies.
+
+DELETE FROM BoxOffice WHERE movie_id = 11;
+
+-- este é o id do filme WALL-E
+
+DELETE FROM Movies WHERE title = 'WALL-E';
+            
+
+# Exercício 7 Exclua da tabela Movies todos os filmes dirigidos por "Andrew Staton".
+
+SELECT id FROM Movies WHERE director = 'Andrew Staton';
+
+-- primeiro é utilizada essa query para selecionar os ids dos filmes a serem excluídos (2 e 9)
+
+DELETE FROM BoxOffice WHERE movie_id IN (2, 9);
+
+DELETE FROM Movies WHERE director = 'Andrew Staton';
+
+# Exercício 8 Altere a classificação da tabela BoxOffice para 9.0 de todos os filmes que lucraram mais de 400 milhões no mercado interno.
+
+UPDATE BoxOffice
+SET rating = 9.0
+WHERE domestic_sales >400000000;
+
+-- Exercício 9 Altere a classificação da tabela BoxOffice para 6.0 de todos os filmes que lucraram menos de 300 milhões no mercado internacional e mais de 200 milhões no mercado interno.
+
+UPDATE BoxOffice
+SET rating = 6.0
+WHERE
+    domestic_sales > 200000000
+    AND international_sales < 300000000;
+
+#    Exercício 10 Exclua da tabela Movies todos os filmes com menos de 100 minutos de duração.
+
+SELECT id, length_minutes FROM Movies 
+WHERE length_minutes < 100;
+
+DELETE FROM BoxOffice 
+WHERE movie_id IN (1, 6, 7, 8);
+
+DELETE FROM Movies 
+WHERE length_minutes < 100;
