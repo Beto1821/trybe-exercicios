@@ -13,7 +13,16 @@ SELECT
     s.first_name,
     s.last_name,
     a.address
-FROM 
-    sakila.staff AS s
-INNER JOIN 
-    sakila.address AS a ON s.address_id = a.address_id;
+FROM sakila.staff AS s
+    INNER JOIN sakila.address AS a ON s.address_id = a.address_id;
+
+# 3 
+SELECT
+    c.customer_id,
+    CONCAT(c.first_name, ' ', c.last_name) AS name,
+    c.email,
+    a.address
+FROM customer AS c
+    INNER JOIN address AS a ON c.address_id = a.address_id
+ORDER BY  c.customer_id DESC
+LIMIT 100;
