@@ -1,31 +1,22 @@
 // app.js
 
 const express = require('express');
+const activities = require('./data/activities');
 
 const app = express();
 
-const activities = [
-  {
-    id: 1,
-    description: 'Banho no cachorro',
-    status: 'A fazer',
-  },
-  {
-    id: 2,
-    description: 'Cortar a grama',
-    status: 'A fazer',
-  },
-  {
-    id: 3,
-    description: 'Estudar JavaScript',
-    status: 'Feito',
-  },
-];
+app.use(express.json());
 
-// req4
+app.get('/activites', (req, res) => res.status(200).json({ activities }));
 
-app.get('/activities', (req, res) => res.status(200).json({ activities }));
-
-// req5
+app.get('/activites/:id', (req, res) => {
+  const { id } = req.params;
+  console.log(req.params);
+  // console.log(activities);
+  console.log(req);
+  const result = activities.find((act) => act.id === Number(id));
+  console.log(result);
+  res.status(201).json(result);
+});
 
 module.exports = app;
