@@ -12,6 +12,15 @@ const readCacaoTrybeFile = async () => {
   }
 };
 
+const writeCacaoTrybeFile = async (cacaoTrybeFile) => {
+  const path = '/files/cacaoTrybeFile.json';
+  try {
+await fs.writeFile(join(__dirname, path), JSON.stringify(cacaoTrybeFile)); //);
+   } catch (error) {
+    return null;
+  }
+};
+
 const getAllChocolates = async () => {
   const cacaoTrybe = await readCacaoTrybeFile();
   return cacaoTrybe.chocolates;
@@ -36,6 +45,7 @@ const findChocolateByName = async (query) => {
 };
 
 const updateChocolate = async (id, update) => {
+  console.log(id, update);
   const cacaoTrybe = await readCacaoTrybeFile();
   const chocolateToUpdate = cacaoTrybe.chocolates.find(
     (chocolate) => chocolate.id === id,
@@ -46,9 +56,12 @@ const updateChocolate = async (id, update) => {
         if (chocolate.id === id) return { ...chocolate, ...update };
         return chocolate;
       });
+      
+
   
-    await writeCacaoTrybeFile(cacaoTrybe);
-    return { ...chocolateToUpdate, ...update };
+      await writeCacaoTrybeFile(cacaoTrybe);
+      return {...chocolateToUpdate, ...update};
+      
   }
 
   return false;

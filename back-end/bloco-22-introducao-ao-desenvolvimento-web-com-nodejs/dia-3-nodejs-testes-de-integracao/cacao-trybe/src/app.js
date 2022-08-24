@@ -2,14 +2,15 @@ const express = require('express');
 const cacaoTrybe = require('./cacaoTrybe');
 
 const app = express();
+app.use(express.json());
 
 app.put('/chocolates/:id', async (req, res) => {
   const { id } = req.params;
-  const { name, brandId } = req.body;
+  const { name, brandId } = req.query;
   const updatedChocolate = await cacaoTrybe.updateChocolate(Number(id), { name, brandId });
 
   if (updatedChocolate) return res.status(200).json({ chocolate: updatedChocolate });
-  res.status(401).json({ message: 'chocolate not found' });
+  res.status(404).json({ message: 'chocolate not found' });
 });
 
 app.get('/chocolates/search', async (req, res) => {
@@ -26,6 +27,7 @@ app.get('/chocolates/total', async (req, res) => {
 
 app.get('/chocolates/:id', async (req, res) => {
   const { id } = req.params;
+  console.log(id);
   // Usamos o Number para converter o id em um inteiro
   const chocolate = await cacaoTrybe.getChocolateById(Number(id));
   res.status(200).json({ chocolate });
