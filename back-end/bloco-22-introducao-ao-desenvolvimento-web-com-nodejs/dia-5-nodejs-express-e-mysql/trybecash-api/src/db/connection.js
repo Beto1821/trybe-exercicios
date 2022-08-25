@@ -2,7 +2,7 @@ const mysql = require('mysql2/promise');
 
 const connection = mysql.createPool({
   host: 'localhost',
-  port: 33060,
+  port: 3307,
   user: 'root',
   password: 'root',
   database: 'trybecashdb',
