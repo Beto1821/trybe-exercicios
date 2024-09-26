@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Gothic&family=Pacifico&display=swap");
+
+h1,
+p {
+  text-align: center;
+}
+
+li:hover {
+  background-color: aqua;
+  /* transition-delay: 1S; */
+  font-family: Pacifico;
+}
+
+ol, ul {
+  list-style: none;
+}
